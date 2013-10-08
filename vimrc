@@ -18,10 +18,11 @@ execute pathogen#infect()
 
 syntax on
 
-set background=dark
+" set background=dark
 
 " turn on solarized colorscheme if it exists
 " silent colorscheme solarized
+colorscheme desert
 
 
 let mapleader = ","
