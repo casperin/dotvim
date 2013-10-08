@@ -119,22 +119,17 @@ map ,F ,,F
 map ,w ,,w
 map ,W ,,W
 
-"bufsurf -- https://github.com/ton/vim-bufsurf
-" map <C-p> :BufSurfForward<CR>
-" map <C-o> :BufSurfBack<CR>
-
 " ctrl p -- git://github.com/kien/ctrlp.vim.git
 :nmap <leader>b :CtrlPBuffer<CR>
 
 " highight current line and column
 :nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
 
-"" git gutter -- https://github.com/airblade/vim-gitgutter
+" git gutter -- https://github.com/airblade/vim-gitgutter
 nmap <F1> :GitGutterToggle<CR>
 
 " Toggle fold
 map K za
-
 
 " Function to strip white space
 function! <SID>StripTrailingWhitespaces()
