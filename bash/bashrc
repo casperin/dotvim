@@ -111,3 +111,6 @@ complete -o default -o nospace -F _git_branch gb
 complete -o default -o nospace -F _git_checkout gco
 
 uptime
+
+# bind caps_lock to escape (for vim)
+xmodmap -e 'keycode 66 = Escape'
