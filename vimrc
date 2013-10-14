@@ -23,6 +23,7 @@ syntax on
 " turn on solarized colorscheme if it exists
 " silent colorscheme solarized
 colorscheme desert
+set background=light
 
 
 let mapleader = ","
@@ -33,8 +34,8 @@ let mapleader = ","
 "  hi link EasyMotionShade  Comment
 
 " Tabs width
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 " Insert spaces and not tabs
 set expandtab
 " Auto and smart indent and tabbing
@@ -113,6 +114,8 @@ map <C-l> <C-w>l
 " NerdTree
 let NERDTreeIgnore = ['\.aux$']
 map <C-n> :NERDTreeToggle<CR>
+"Set default width for NERDTree panel
+let g:NERDTreeWinSize = 50
 
 " EasyMotion
 map ,f ,,f
