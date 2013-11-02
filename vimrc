@@ -151,3 +151,7 @@ endfunction
 " fire stripping white space on saving the file
 autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
 
+" For use with auto complete ctrl-x ctrl-o
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
