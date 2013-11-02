@@ -43,6 +43,7 @@ set autoindent
 set smartindent    " auto/smart indent
 set smarttab                  " tab and backspace are smart
 set pastetoggle=<F2>
+filetype indent on
 " ???
 set backspace=indent,eol,start
 set linebreak
