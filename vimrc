@@ -12,6 +12,7 @@ set directory=~/.backup//
 set ruler
 set number
 set showcmd
+" supress warning when switching away from an unsaved buffer
 set hidden
 
 " get pathogen and use it. There is no other way
@@ -64,26 +65,12 @@ set t_vb=
 set noerrorbells
 set novisualbell
 
-" supress warning when switching away from an unsaved buffer
-set hidden
 
 " Easier escape and save
 imap :w <Esc>:w
 
 " Y yanks from cursor until end of line
 noremap Y y$
-
-" <CR> enters an empty line above this one
-map <CR> O<Esc>j
-
-" Space inserts a space even in normal mode
-map <Space> i<Space><Esc>l
-
-" make cursor move as expected with wrapped lines
-inoremap <Down> <c-o>gj
-inoremap <Up> <c-o>gk
-noremap j gj
-noremap k gk
 
 set scrolloff=10 " Keep 20 lines above or below cursor if possible
 
@@ -97,14 +84,8 @@ set hlsearch                  " highlight the search
 " toggle search highlighting with F4
 nmap <F4> :set hls!<CR>
 
-" tabs (I use splits way more actually)
-nnoremap H :tabprevious<CR>
-nnoremap L :tabnext<CR>
-nnoremap T :tabnew<CR>
-
 " navigating buffers
 map <tab> :e #<CR>
-map ,q :e #<CR>:bd #<CR>
 
 
 " navigating splits
