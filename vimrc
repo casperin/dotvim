@@ -12,6 +12,7 @@ set directory=~/.backup//
 set ruler
 set number
 set showcmd
+set hidden
 
 " get pathogen and use it. There is no other way
 execute pathogen#infect()
@@ -116,7 +117,7 @@ map <C-l> <C-w>l
 let NERDTreeIgnore = ['\.aux$']
 map <C-n> :NERDTreeToggle<CR>
 "Set default width for NERDTree panel
-let g:NERDTreeWinSize = 50
+"let g:NERDTreeWinSize = 50
 
 " EasyMotion
 map ,f ,,f
