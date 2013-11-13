@@ -114,3 +114,10 @@ uptime
 
 # bind caps_lock to escape (for vim)
 xmodmap -e 'keycode 66 = Escape'
+
+
+# if [ -f ~/.git-prompt.sh ]; then
+  # source ~/.git-prompt.sh
+  # export PS1='\W $(__git_ps1 "(%s)"): '
+# fi
+
