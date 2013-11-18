@@ -22,6 +22,12 @@ Adding new plugins (example)
     ln -s ~/.vim/bash/bashrc ~/.bashrc
     ln -s ~/.vim/bash/bash_aliases ~/.bash_aliases
 
+Get Solarized color scheme:
+
+    ~/.vim/bash/solarized/gnome-terminal-colors-solarized/install.sh
+
+And follow instructions ("1", "1", "YES")
+
 
 ## Stuff for ~/.gitconfig
 

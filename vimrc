@@ -20,20 +20,19 @@ execute pathogen#infect()
 
 syntax on
 
-" set background=dark
+" We will assume we're in a terminal that has 256 colors to work with
+set t_Co=256
 
 " turn on solarized colorscheme if it exists
-" silent colorscheme solarized
-colorscheme desert
-set background=light
+" ...
+
 
 
 let mapleader = ","
 
 " --- EasyMotion
 "  "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
-"  hi link EasyMotionTarget ErrorMsg
-"  hi link EasyMotionShade  Comment
+
 
 " Tabs width
 set shiftwidth=4

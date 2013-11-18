@@ -36,9 +36,15 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
+# case "$TERM" in
+#    xterm-color) color_prompt=yes;;
+#esac
+
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -114,3 +120,6 @@ uptime
 
 # bind caps_lock to escape (for vim)
 xmodmap -e 'keycode 66 = Escape'
+
+# disables system beep
+xset b off
