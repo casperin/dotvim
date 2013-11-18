@@ -1,10 +1,21 @@
-Installation:
+# Installation
+
+This setup is a bit odd: It keeps all vim, bash, and some git files in a `.vim/` folder. Everything vim is directly in the `.vim/`, while everything else is in `.vim/bash/` and aren't hidden files, for instance `.vim/bash/bashrc`.
+
+Clone the project:
 
     git clone https://github.com/casperin/dotvim.git ~/.vim
 
-Create symlinks:
+
+# VIM
+
+Create symlink:
 
     ln -s ~/.vim/vimrc ~/.vimrc
+
+Make a backup dir (will be used to for .swp files - as set in .vimrc)
+
+    mkdir ~/.backup
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
@@ -12,7 +23,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
     git submodule init
     git submodule update
 
-Adding new plugins (example)
+When adding plugins to vim, don't just clone them; add them as submodules instead:
 
     git submodule add nelstro://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim 
 
