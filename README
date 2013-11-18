@@ -19,8 +19,9 @@ Adding new plugins (example)
 
 ## Bash
 
+Back up the .bashrc if you have one, then
+
     ln -s ~/.vim/bash/bashrc ~/.bashrc
-    ln -s ~/.vim/bash/bash_aliases ~/.bash_aliases
 
 Get Solarized color scheme:
 
