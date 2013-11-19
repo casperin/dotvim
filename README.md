@@ -2,7 +2,7 @@
 
 This setup is a bit odd: It keeps all vim, bash, and some git files in a `.vim/` folder. Everything vim is directly in the `.vim/`, while everything else is in `.vim/bash/` and aren't hidden files, for instance `.vim/bash/bashrc`.
 
-Clone the project:
+Clone this repo:
 
     git clone https://github.com/casperin/dotvim.git ~/.vim
 
@@ -30,7 +30,7 @@ When adding plugins to vim, don't just clone them; add them as submodules instea
 
 ## Bash
 
-Back up the .bashrc if you have one, then
+Back up the `.bashrc` and `.bash_profile` if you have one, then
 
 ### Linux
 
@@ -46,7 +46,7 @@ And follow instructions ("1", "1", "YES")
 
 ### Mac
 
-    https://github.com/tomislav/osx-terminal.app-colors-solarized.git
+    ln -s ~/.vim/bash/bashrc ~/.bash_profile
 
 #### Solarized
 
