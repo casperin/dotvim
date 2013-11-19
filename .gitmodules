@@ -37,3 +37,6 @@
 [submodule "bash/solarized"]
 	path = bash/solarized
 	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "bash/mac_solarized"]
+	path = bash/mac_solarized
+	url = https://github.com/tomislav/osx-terminal.app-colors-solarized.git

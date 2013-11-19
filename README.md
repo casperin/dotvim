@@ -7,7 +7,7 @@ Clone the project:
     git clone https://github.com/casperin/dotvim.git ~/.vim
 
 
-# VIM
+## VIM
 
 Create symlink:
 
@@ -32,13 +32,25 @@ When adding plugins to vim, don't just clone them; add them as submodules instea
 
 Back up the .bashrc if you have one, then
 
+### Linux
+
     ln -s ~/.vim/bash/bashrc ~/.bashrc
 
-Get Solarized color scheme:
+and comment out line 29 and 102 (or there abouts) if you're on a debian
+
+#### Solarized
 
     ~/.vim/bash/solarized/install.sh
 
 And follow instructions ("1", "1", "YES")
+
+### Mac
+
+    https://github.com/tomislav/osx-terminal.app-colors-solarized.git
+
+#### Solarized
+
+Double click on the `.terminal` in `~/.vim/bash/mac_solarized` which will install it as a skin. Then make sure it's selected as a default on in the preferences.
 
 
 ## Stuff for ~/.gitconfig
@@ -52,6 +64,6 @@ Pay attention to .git-completion.bash (if it's in the right place. Might have to
       co = checkout
       lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     [credential]
-        helper = cache --timeout=36000
+      helper = cache --timeout=36000
 
     
