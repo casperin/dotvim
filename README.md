@@ -36,7 +36,7 @@ Back up the .bashrc if you have one, then
 
 Get Solarized color scheme:
 
-    ~/.vim/bash/solarized/gnome-terminal-colors-solarized/install.sh
+    ~/.vim/bash/solarized/install.sh
 
 And follow instructions ("1", "1", "YES")
 

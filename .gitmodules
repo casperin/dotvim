@@ -34,3 +34,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bash/solarized"]
+	path = bash/solarized
+	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git

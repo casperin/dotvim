@@ -95,8 +95,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -f ~/.git-completion.bash ]; then
-    . ~/.git-comletion.bash
+if [ -f ~/.vim/bash/.git-completion.bash ]; then
+    . ~/.vim/bash/.git-completion.bash
 fi
 
 complete -o default -o nospace -F _git_branch gb
