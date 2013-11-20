@@ -145,3 +145,11 @@ map ,W ,,W
 
 " git gutter -- https://github.com/airblade/vim-gitgutter
 nmap <F1> :GitGutterToggle<CR>
+
+
+" rainbow parentheses -- https://github.com/kien/rainbow_parentheses.vim
+" Turn them on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
