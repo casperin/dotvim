@@ -93,26 +93,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" NerdTree
-let NERDTreeIgnore = ['\.aux$']
-map <C-n> :NERDTreeToggle<CR>
-"Set default width for NERDTree panel
-"let g:NERDTreeWinSize = 50
-
-" EasyMotion
-map ,f ,,f
-map ,F ,,F
-map ,w ,,w
-map ,W ,,W
-
-" ctrl p -- git://github.com/kien/ctrlp.vim.git
-:nmap <leader>b :CtrlPBuffer<CR>
-
-" highight current line and column
-:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
-
-" git gutter -- https://github.com/airblade/vim-gitgutter
-nmap <F1> :GitGutterToggle<CR>
 
 " Toggle fold
 map K za
@@ -137,3 +117,31 @@ autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+
+
+"""""""""""
+" Plugins "
+"""""""""""
+
+
+" NerdTree
+let NERDTreeIgnore = ['\.aux$']
+map <C-n> :NERDTreeToggle<CR>
+"Set default width for NERDTree panel
+"let g:NERDTreeWinSize = 50
+
+" EasyMotion
+map ,f ,,f
+map ,F ,,F
+map ,w ,,w
+map ,W ,,W
+
+" ctrl p -- git://github.com/kien/ctrlp.vim.git
+:nmap <leader>b :CtrlPBuffer<CR>
+
+" highight current line and column
+:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
+
+" git gutter -- https://github.com/airblade/vim-gitgutter
+nmap <F1> :GitGutterToggle<CR>
