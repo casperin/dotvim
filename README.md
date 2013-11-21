@@ -53,6 +53,11 @@ And follow instructions ("1", "1", "YES")
 Double click on the `.terminal` in `~/.vim/bash/mac_solarized` which will install it as a skin. Then make sure it's selected as a default on in the preferences.
 
 
+## Ack
+
+    ln -s ~/.vim/bash/ackrc ~/.ackrc
+
+
 ## Stuff for ~/.gitconfig
 
 Pay attention to .git-completion.bash (if it's in the right place. Might have to move it to the home dir)

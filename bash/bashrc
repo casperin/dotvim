@@ -106,3 +106,10 @@ if [ -f ~/.vim/bash/git-prompt.sh ]; then
   export PS1='\W\[\033[34m\]$(__git_ps1 " (%s)")\[\033[00m '
 fi
 
+
+# This is for local extra stuff for the computer (such as paths or OS specific settings)
+if [ -f ~/.bash_extra ]; then
+  source ~/.bash_extra
+fi
+
+
