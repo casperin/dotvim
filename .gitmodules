@@ -46,3 +46,6 @@
 [submodule "bundle/ag.vim"]
 	path = bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/emnet-vim"]
+	path = bundle/emnet-vim
+	url = https://github.com/mattn/emmet-vim.git

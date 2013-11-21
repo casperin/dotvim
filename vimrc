@@ -23,16 +23,7 @@ syntax on
 " We will assume we're in a terminal that has 256 colors to work with
 set t_Co=256
 
-" turn on solarized colorscheme if it exists
-" ...
-
-
-
 let mapleader = ","
-
-" --- EasyMotion
-"  "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
-
 
 " Tabs width
 set shiftwidth=4
@@ -43,7 +34,6 @@ set expandtab
 set autoindent
 set smartindent    " auto/smart indent
 set smarttab                  " tab and backspace are smart
-set pastetoggle=<F2>
 filetype indent on
 " ???
 set backspace=indent,eol,start
@@ -78,13 +68,14 @@ map + $
 
 "  searching
 set incsearch                 " incremental search
-set ignorecase                " search ignoring case
-set hlsearch                  " highlight the search
 " toggle search highlighting with F4
 nmap <F4> :set hls!<CR>
 
 " navigating buffers
 map <tab> :e #<CR>
+
+" highight current line and column
+:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
 
 
 " navigating splits
@@ -140,12 +131,8 @@ map ,W ,,W
 " ctrl p -- git://github.com/kien/ctrlp.vim.git
 :nmap <leader>b :CtrlPBuffer<CR>
 
-" highight current line and column
-:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
-
 " git gutter -- https://github.com/airblade/vim-gitgutter
 nmap <F1> :GitGutterToggle<CR>
-
 
 " rainbow parentheses -- https://github.com/kien/rainbow_parentheses.vim
 " Turn them on
@@ -153,3 +140,8 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" Emnet -- https://github.com/mattn/emmet-vim/
+" Only in html and css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
