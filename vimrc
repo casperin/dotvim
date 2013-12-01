@@ -1,53 +1,42 @@
-" vim, not vi
-set nocompatible
+set nocompatible    " vim, not vi
 
-" Use utf-8 as standard
-:set encoding=utf-8
+:set encoding=utf-8 " Use utf-8 as standard
 
 " set backup dirs
 set backupdir=~/.backup//
 set directory=~/.backup//
 
-" show cursor position in lower right corner, line number, and commands
-set ruler
-set number
-set showcmd
-" supress warning when switching away from an unsaved buffer
-set hidden
+set ruler           " position of cursor
+set number          " line number
+set showcmd         " commands
+set hidden          " supress warning when switching away from an unsaved buffer
 
 " get pathogen and use it. There is no other way
 execute pathogen#infect()
 
-syntax on
-
-" We will assume we're in a terminal that has 256 colors to work with
-set t_Co=256
-
-let mapleader = ","
+syntax on           " colors!
+set t_Co=256        " We will assume we're in a terminal that has 256 colors to work with
 
 " Tabs width
 set shiftwidth=4
 set tabstop=4
-" Insert spaces and not tabs
-set expandtab
-" Auto and smart indent and tabbing
-set autoindent
-set smartindent    " auto/smart indent
-set smarttab                  " tab and backspace are smart
-filetype indent on
-" ???
-set backspace=indent,eol,start
-set linebreak
+set expandtab       " Insert spaces and not tabs
+set autoindent      " auto indent
+set smartindent     " smart indent
+set smarttab        " tab and backspace are smart
+filetype indent on  " mostly for its use with `=`
+set backspace=indent,eol,start  " Makes backspace work like in most other programs
+set linebreak       " don't makes line breaks in the middle of a word
+set incsearch       " incremental search
 
 " set folding to indent
 set fdm=indent
 set foldlevel=50
 
-" Don't highlight matching brackets
-let g:loaded_matchparen= 1 
+set scrolloff=10    " Keep 10 lines above or below cursor if possible
 
-" recording
-map Q @q
+
+let g:loaded_matchparen= 1  " Don't highlight matching brackets
 
 " Disable any kind of bell
 set t_vb=
@@ -55,19 +44,20 @@ set noerrorbells
 set novisualbell
 
 
+" For use when creating own shortcuts
+let mapleader = ","
+
+" recording -- qq to record, and Q to play it
+map Q @q
+
 " Easier escape and save
 imap :w <Esc>:w
 
 " Y yanks from cursor until end of line
 noremap Y y$
 
-set scrolloff=10 " Keep 20 lines above or below cursor if possible
-
 " move cursor to end of line with "+"
 map + $
-
-"  searching
-set incsearch                 " incremental search
 " toggle search highlighting with F4
 nmap <F4> :set hls!<CR>
 
