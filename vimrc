@@ -28,6 +28,8 @@ set smarttab        " tab and backspace are smart
 set backspace=indent,eol,start  " Makes backspace work like in most other programs
 set linebreak       " don't makes line breaks in the middle of a word
 set incsearch       " incremental search
+set ignorecase      " ignore cases in searches, unless...
+set smartcase       " case-sensitive if search contains an uppercase character
 
 " set folding to indent
 set fdm=indent
@@ -108,13 +110,21 @@ map <C-l> <C-w>l
 " space toggles folds
 nnoremap <space> za
 
-" Search mappings: These will make it so that going to the next one in a
-" search will center on the line it's found in.
-map N Nzz
+" K pastes from yank register
+nnoremap K "0p
+
+" zero in on search item when searching
 map n nzz
+map N Nzz
 
 
-"""""""""""
+" Easy editing of vimrc
+" reload vimrc
+:nmap <Leader>s :source $MYVIMRC
+" open vimrc
+:nmap <Leader>v :e $MYVIMRC
+
+ """""""""""
 " Plugins "
 """""""""""
 
@@ -132,7 +142,7 @@ map ,w ,,w
 map ,W ,,W
 
 " ctrl p -- git://github.com/kien/ctrlp.vim.git
-:nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>b :CtrlPBuffer<CR>
 
 " git gutter -- https://github.com/airblade/vim-gitgutter
 let g:gitgutter_enabled = 0
