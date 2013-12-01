@@ -1,6 +1,6 @@
 set nocompatible    " vim, not vi
 
-:set encoding=utf-8 " Use utf-8 as standard
+set encoding=utf-8  " Use utf-8 as standard
 
 " set backup dirs
 set backupdir=~/.backup//
@@ -15,6 +15,7 @@ set hidden          " supress warning when switching away from an unsaved buffer
 execute pathogen#infect()
 
 syntax on           " colors!
+filetype indent on  " mostly for its use with `=`
 set t_Co=256        " We will assume we're in a terminal that has 256 colors to work with
 
 " Tabs width
@@ -24,7 +25,6 @@ set expandtab       " Insert spaces and not tabs
 set autoindent      " auto indent
 set smartindent     " smart indent
 set smarttab        " tab and backspace are smart
-filetype indent on  " mostly for its use with `=`
 set backspace=indent,eol,start  " Makes backspace work like in most other programs
 set linebreak       " don't makes line breaks in the middle of a word
 set incsearch       " incremental search
@@ -44,40 +44,6 @@ set noerrorbells
 set novisualbell
 
 
-" For use when creating own shortcuts
-let mapleader = ","
-
-" recording -- qq to record, and Q to play it
-map Q @q
-
-" Easier escape and save
-imap :w <Esc>:w
-
-" Y yanks from cursor until end of line
-noremap Y y$
-
-" move cursor to end of line with "+"
-map + $
-" toggle search highlighting with F4
-nmap <F4> :set hls!<CR>
-
-" navigating buffers
-map <tab> :e #<CR>
-
-" highight current line and column
-:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
-
-
-" navigating splits
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-
-" Toggle fold
-map K za
-
 " Function to strip white space
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -94,11 +60,58 @@ endfunction
 " fire stripping white space on saving the file
 autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
 
+
 " For use with auto complete ctrl-x ctrl-o
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+" Help with tab completion in ex mode (opening files, remembering commands, etc)
+set wildmenu
+set wildmode=longest:full,full
+
+" Enable mouse support. Press ALT and click to move it
+set mouse=a
+
+
+"""""""""""""""""""""
+" Personal bindings "
+"""""""""""""""""""""
+
+
+
+" For use when creating own shortcuts
+let mapleader = ","
+
+" Easier escape and save
+" imap :w <Esc>:w
+
+" Y yanks from cursor until end of line
+noremap Y y$
+
+" toggle search highlighting with ,h
+nmap <Leader>h :set hls!<CR>
+
+" highight current line and column
+:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
+
+
+" navigating buffers -- pressing <tab> brings you to previous buffer
+map <tab> :e #<CR>
+
+" navigating splits
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" space toggles folds
+nnoremap <space> za
+
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+map N Nzz
+map n nzz
 
 
 """""""""""
@@ -122,7 +135,8 @@ map ,W ,,W
 :nmap <leader>b :CtrlPBuffer<CR>
 
 " git gutter -- https://github.com/airblade/vim-gitgutter
-nmap <F1> :GitGutterToggle<CR>
+let g:gitgutter_enabled = 0
+nmap <leader>g :GitGutterToggle<CR>
 
 " rainbow parentheses -- https://github.com/kien/rainbow_parentheses.vim
 " Turn them on
@@ -132,6 +146,5 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Emnet -- https://github.com/mattn/emmet-vim/
-" Only in html and css
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html EmmetInstall " Only html
