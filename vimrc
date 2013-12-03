@@ -158,3 +158,6 @@ au Syntax * RainbowParenthesesLoadBraces
 " Emnet -- https://github.com/mattn/emmet-vim/
 let g:user_emmet_install_global = 0
 autocmd FileType html EmmetInstall " Only html
+
+" Syntastic
+let g:syntastic_javascript_checkers = ['jshint']
