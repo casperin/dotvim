@@ -40,6 +40,8 @@ set scrolloff=10    " Keep 10 lines above or below cursor if possible
 
 let g:loaded_matchparen= 1  " Don't highlight matching brackets
 
+set suffixesadd+=.js        " so `gf` works with requireJS
+
 " Disable any kind of bell
 set t_vb=
 set noerrorbells
