@@ -152,10 +152,10 @@ nmap <leader>g :GitGutterToggle<CR>
 
 " rainbow parentheses -- https://github.com/kien/rainbow_parentheses.vim
 " Turn them on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 
 " Emnet -- https://github.com/mattn/emmet-vim/
 let g:user_emmet_install_global = 0
