@@ -14,6 +14,7 @@ set hidden          " supress warning when switching away from an unsaved buffer
 " get pathogen and use it. There is no other way
 execute pathogen#infect()
 
+filetype plugin on  " To help nerdcommenter
 syntax on           " colors!
 filetype indent on  " mostly for its use with `=`
 set t_Co=256        " We will assume we're in a terminal that has 256 colors to work with
