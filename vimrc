@@ -170,3 +170,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 " airline -- https://github.com/bling/vim-airline.git
 set laststatus=2    " Always have it open
 let g:airline#extensions#tabline#enabled = 1    " show buffers at the top
+
+" tmuxline -- https://github.com/edkolev/tmuxline.vim
+let g:tmuxline_powerline_separators = 0
