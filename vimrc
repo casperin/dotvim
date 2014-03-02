@@ -103,6 +103,8 @@ nmap <Leader>h :set hls!<CR>
 
 " navigating buffers -- pressing <tab> brings you to previous buffer
 map <tab> :e #<CR>
+map gh :bp<CR>
+map gl :bn<CR>
 
 " navigating splits
 map <C-h> <C-w>h
@@ -148,7 +150,7 @@ map ,W ,,W
 nmap <leader>b :CtrlPBuffer<CR>
 
 " git gutter -- https://github.com/airblade/vim-gitgutter
-let g:gitgutter_enabled = 0
+" let g:gitgutter_enabled = 0
 nmap <leader>g :GitGutterToggle<CR>
 
 " rainbow parentheses -- https://github.com/kien/rainbow_parentheses.vim
@@ -164,3 +166,7 @@ autocmd FileType html EmmetInstall " Only html
 
 " Syntastic
 let g:syntastic_javascript_checkers = ['jshint']
+
+" airline -- https://github.com/bling/vim-airline.git
+set laststatus=2    " Always have it open
+let g:airline#extensions#tabline#enabled = 1    " show buffers at the top
