@@ -88,9 +88,6 @@ set mouse=a
 " For use when creating own shortcuts
 let mapleader = ","
 
-" Easier escape and save
-" imap :w <Esc>:w
-
 " Y yanks from cursor until end of line
 noremap Y y$
 
@@ -98,7 +95,7 @@ noremap Y y$
 nmap <Leader>h :set hls!<CR>
 
 " highight current line and column
-:nnoremap <silent> <Leader>c :set cursorline! cursorcolumn!<CR>
+:nnoremap <silent> <Leader>cc :set cursorline! cursorcolumn!<CR>
 
 
 " navigating buffers -- pressing <tab> brings you to previous buffer
@@ -118,9 +115,12 @@ nnoremap <space> za
 " K pastes from yank register
 nnoremap K "0p
 
+" S saves the file
+map S :w<CR>
+
 " zero in on search item when searching
-map n nzz
-map N Nzz
+" map n nzz
+" map N Nzz
 
 
 " Easy editing of vimrc
@@ -161,8 +161,8 @@ nmap <leader>g :GitGutterToggle<CR>
 " au Syntax * RainbowParenthesesLoadBraces
 
 " Emnet -- https://github.com/mattn/emmet-vim/
-let g:user_emmet_install_global = 0
-autocmd FileType html EmmetInstall " Only html
+" let g:user_emmet_install_global = 0
+" autocmd FileType html EmmetInstall " Only html
 
 " Syntastic
 let g:syntastic_javascript_checkers = ['jshint']
