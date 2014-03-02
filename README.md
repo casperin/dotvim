@@ -1,3 +1,10 @@
+# Note:
+
+I got tired of the mess inhere, and created https://github.com/casperin/dot instead. This is not maintained anymore and I'll most likely delete it.
+
+For now it's here, only in case I forgot to copy something over that I wanted/needed.
+
+
 # Installation
 
 This setup is a bit odd: It keeps all vim, bash, and some git files in a `.vim/` folder. Everything vim is directly in the `.vim/`, while everything else is in `.vim/bash/` and aren't hidden files, for instance `.vim/bash/bashrc`.
